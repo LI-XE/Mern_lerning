@@ -1,3 +1,11 @@
+.projectClass {
+  display: inline-block;
+  width: 200px;
+  border: 1px solid black;
+  margin: 25px;
+  padding: 20px;
+}
+
 .App {
   text-align: center;
 }

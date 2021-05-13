@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import MainContent from './components/Maincontent';
+import Projects from './views/Projects';
+import Project from './views/Projects';
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
       {/* MainContent */}
       <MainContent/>
       {/* Projects */}
+      <Projects />
     </div>
   );
 }
