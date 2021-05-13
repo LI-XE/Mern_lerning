@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
+import MainContent from './components/Maincontent';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* Navbar */}
       <Navbar />
       {/* MainContent */}
+      <MainContent/>
       {/* Projects */}
     </div>
   );
