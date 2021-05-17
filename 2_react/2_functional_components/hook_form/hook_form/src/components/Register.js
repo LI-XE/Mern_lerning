@@ -39,6 +39,11 @@ const Register = (props) => {
               onChange={ (e) => setFirstName(e.target.value) }
               />
           </div>
+          {
+            firstName.length > 0 && firstName.length < 2 ?
+              <span>First Name must be at least 3 characters long</span>
+              : null
+          }
           <div style={inputDataDivStyle}>
             <lable>Last Name:</lable>
             <input 
@@ -47,6 +52,11 @@ const Register = (props) => {
               onChange={ (e) => setLastName(e.target.value) }
             />
           </div>
+          {
+            lastName.length > 0 && lastName.length < 2 ?
+              <span>Last Name must be at least 3 characters long</span>
+              : null
+          }
           <div style={inputDataDivStyle}>
             <lable>Email:</lable>
             <input 
@@ -55,6 +65,11 @@ const Register = (props) => {
               onChange={ (e) => setEmail(e.target.value) }
             />
           </div>
+          {
+            email.length > 0 && email.length < 2 ?
+              <span>Email must be at least 3 characters long</span>
+              : null
+          }
           <div style={inputDataDivStyle}>
             <lable>Password:</lable>
             <input 
@@ -63,6 +78,18 @@ const Register = (props) => {
               onChange={ (e) => setPassword(e.target.value) }
               />
           </div>
+          {
+            password.length > 0 && password.length < 8 ?
+              <span>Password must be at least 3 characters long</span>
+              : null
+          }
+          {
+          password.length >= 8 && confirmPassword.length > 0 ?
+            password !== confirmPassword ?
+              <p className="error">Passwords do not match</p>
+              : null
+            : null 
+        }
           <div style={inputDataDivStyle}>
             <lable>Confirm Password:</lable>
             <input 
