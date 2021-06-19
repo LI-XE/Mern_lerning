@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
 import Tab from './components/Tab';
 import Display from './components/Display';
 import { useState } from 'react';
@@ -19,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Tab
+      <Tab className="tab"
         allTabs = { allTabs }
         tabIndex = { tabIndex }
         setTabIndex = { setTabIndex }

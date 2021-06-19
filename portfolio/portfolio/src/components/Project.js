@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 const Project = (props) => {
+    console.log("Starting Project: " + props.title);
+    console.log(props);
+    
     // const [ getter, setter ] = useState(initial_value);      initial_value can be number, string, array, object, anyother
     const [ likes, setLikes ] = useState(0); // parameter can be number, string, array, object, anyother
     const [ title, setTitle ] = useState(props.title)
