@@ -1,8 +1,45 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useState } from 'react';
+import axios from 'axios';
+import { navigate } from '@reach/router';
 
 const Form = (props) => {
-    const { product, setProduct, errors, handleSubmit } = props;
+    // const [ errors, setErrors ] = useState({});
+    // const [ product, setProduct ] = useState({
+    //     title: "",
+    //     price: "",
+    //     description: "",
+    // });
+    const { product, setProduct, errors, setErrors, submitButtonLabel, handleSubmit } = props;
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+        
+    //     axios.post("http://localhost:8000/api/products", product)
+    //         .then((res) => {
+    //             console.log(res.data);
+    //             if(res.data.errors){
+    //                 setErrors(res.data.errors);
+    //             }
+    //             else{
+    //                 navigate("/");
+    //             }
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         });
+    // }
+
+    // useEffect(()=> {
+    //     setProduct(true);
+    // },[setProduct]);
+
+    // const submitProductClick = () => {
+    //     if(product) {
+    //       setProduct(false);
+    //     } else {
+    //       setProduct(true);
+    //     }
+    //   }
 
     const inputChange = (e) => {
         console.log("input title: " + e.target.title);
@@ -59,7 +96,7 @@ const Form = (props) => {
                         onChange={ (e) => inputChange(e) }
                         />
                 </div>
-                <button type="submit">Create</button>
+                <button type="submit" className="submitBtn">{ submitButtonLabel }</button>
             </form>
         </div>
     )

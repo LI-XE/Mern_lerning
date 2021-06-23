@@ -2,6 +2,21 @@
   text-align: center;
 }
 
+link {
+  margin: 0px 10px;
+  color:coral;
+}
+
+.delete{
+  display: inline-block;
+}
+
+
+.singleProduct {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 button {
   margin: 0px 10px;
   padding: 5px 20px;
@@ -16,6 +31,24 @@ button {
   color: red;
   margin-left: 25px;
   margin-bottom: 25px;
+}
+
+.right{
+  float: right;
+}
+.deleteBtn {
+  color: black;
+  background-color: red;
+  display:inline-block;
+}
+
+.submitBtn{
+  margin: 5px;
+}
+
+.editBtn {
+  color: black;
+  background-color: green;
 }
 
 .App-logo {
