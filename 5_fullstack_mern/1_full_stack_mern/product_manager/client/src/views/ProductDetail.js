@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 import DeleteProduct from './DeleteProduct';
-import EditProduct from './EditProduct';
 
 const ProductDetail = (props) => {
     const [ product, setProduct ] = useState([]);

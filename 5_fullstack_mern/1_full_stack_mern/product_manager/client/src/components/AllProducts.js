@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, navigate } from '@reach/router';
+import { Link } from '@reach/router';
 import Form from './Form';
 import DeleteProduct from '../views/DeleteProduct';
 
 const AllProducts = (props) => {
     const [ products, setProducts ] = useState([]);
-    // const { product, setProduct } = props;
     const [ errors, setErrors ] = useState({});
     const [ product, setProduct ] = useState({
         title: "",
@@ -60,6 +59,8 @@ const AllProducts = (props) => {
                 setProduct={setProduct}
                 errors={errors}
                 handleSubmit={handleSubmit} 
+                submitButtonLabel={ "Add Product" }
+
             />
             <h1>All Products:</h1>
             {
