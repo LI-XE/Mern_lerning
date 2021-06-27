@@ -10,7 +10,7 @@ app.use(cors());
 
 require('./config/mongoose.config');
 
-require('./routes/team.routes')(app);
+require('./routes/player.routes')(app);
 
 app.listen(8000, () => {
     console.log("Listening at Port 8000");
